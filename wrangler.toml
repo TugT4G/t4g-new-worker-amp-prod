@@ -1,0 +1,29 @@
+name = "t4g-amp-optimizer"
+account_id = "MY_ID"
+route = "https://www.tips4gamers.com/*"
+zone_id = "MY_ID"
+workers_dev = true
+type = "webpack"
+webpack_config = "node_modules/@ampproject/cloudflare-optimizer-scripts/webpack.config.js"
+
+[env.dev]
+name = "t4g-amp-optimizer-dev"
+vars = { MODE = "dev" }
+kv_namespaces = [
+         { binding = "KV", id = "MY_ID", preview_id = "MY_PREVIEW_ID" },
+]
+
+[env.beta]
+name = "t4g-amp-optimizer-beta"
+vars = { MODE = "beta" }
+kv_namespaces = [
+         { binding = "KV", id = "MY_ID", preview_id = "MY_PREVIEW_ID" },
+]
+
+[env.prod]
+name = "t4g-amp-optimizer-prod"
+vars = { MODE = "prod" }
+route = "https://www.tips4gamers.com/*"
+kv_namespaces = [
+         { binding = "KV", id = "MY_ID",  preview_id = "MY_PREVIEW_ID" }
+]
