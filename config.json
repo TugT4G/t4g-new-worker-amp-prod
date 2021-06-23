@@ -1,0 +1,8 @@
+{
+    "enableKVCache": true,
+    "enableCloudflareImageOptimization": false,
+    "optimizer": {
+      "maxHeroImageCount": 5
+    }
+  
+}
